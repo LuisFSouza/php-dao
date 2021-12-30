@@ -19,10 +19,16 @@ require_once("config.php");
 
 //echo $aluno;
 
+//$usuario = new Usuario();
+
+//$usuario->loadById(2);
+
+//$usuario->update("joao", "234");
+
+//echo $usuario;
+
 $usuario = new Usuario();
 
 $usuario->loadById(2);
 
-$usuario->update("joao", "234");
-
-echo $usuario;
+$usuario->delete();

@@ -55,6 +55,18 @@ class Usuario{
         ));
     }
 
+    public function delete(){
+        $sql = new Sql();
+        $sql->execQuery("delete from tb_usuarios where idusuario = :ID", array(
+            ":ID"=>$this->getIdusuario()
+        ));
+
+        $this->setIdusuario(0);
+        $this->setDeslogin("");
+        $this->setDessenha("");
+        $this->setDtcadastro(new DateTime);
+    }
+
     public function setData($data){
         $this->setIdusuario($data['idusuario']);
         $this->setDeslogin($data['deslogin']);
