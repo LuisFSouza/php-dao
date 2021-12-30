@@ -9,7 +9,12 @@ require_once("config.php");
 //$lista = Usuario::search('li');
 //echo json_encode($lista);
 
-$usuario = new Usuario();
-$usuario->login('lipe', '123');
+//$usuario = new Usuario();
+//$usuario->login('lipe', '123');
 
-echo $usuario;
+//echo $usuario;
+
+$aluno = new Usuario("marchi", "1234");
+$aluno->insert();
+
+echo $aluno;
